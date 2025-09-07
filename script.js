@@ -27,8 +27,9 @@ function leer(e){
 
 function validarFormulario (e) {
     e.preventDefault();
-    const { nombre, apellido, email, mensaje } = datos;
+    const {nombre, apellido, email, mensaje} = datos;
 
+    console.log(nombre,apellido,email,mensaje)
     if (!nombre || !apellido || !email || !mensaje) {
         alerta.style.display = 'block';
         let camp1 = document.querySelector('#err1')
@@ -40,7 +41,7 @@ function validarFormulario (e) {
         let camp4 = document.querySelector('#err4');
         camp4.textContent = 'Porfavor, selecciona una solicitud';
         let camp5 = document.querySelector('#err5');
-        camp5.textContent =  'Campo obligatorio';
+        camp5.textContent = 'Campo obligatorio';
         let camp6 = document.querySelector('#err6');
         camp6.textContent = 'Para continuar, es necesario que des consentimiento a ser contactado';
         const error = [camp1, camp2, camp3, camp4, camp5, camp6];
@@ -48,25 +49,24 @@ function validarFormulario (e) {
             dato.style.color = 'red';
             dato.style.marginTop = '1rem';
             dato.style.marginLeft = '.5rem';
-            dato.style.fontsize = '2rem';
         });
         let inputs = document.querySelectorAll('input');
         inputs.forEach(input => {
             document.querySelector('.query1').style.border = "1px solid red";
             document.querySelector('.query2').style.border = "1px solid red";
             input.style.border = "1px solid red";
-        })
+        });
+        return;
     }
-    else {
-        alert("Mensaje Enviado!\nGracias por completar el formulario, nos pondremos en contacto pronto.")
-    }
+    alert("Mensaje Enviado!\nGracias por completar el formulario, nos pondremos en contacto pronto.");
 }
 
-boton.addEventListener('submit',validarFormulario)
+boton.addEventListener('submit',validarFormulario);
 
 
 
 let cerrar = document.querySelector('#cerrar');
-cerrar.addEventListener('click',() => {
-    window.location.reload()
-});
+
+cerrar.addEventListener('click', () => {
+    window.location.reload();
+})
