@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta name="description" content="Formulario basico">
+    <meta name="author" content="Lissandro aguilar">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="styles.css">
+    <title>Frontend Mentor | Contact form</title>
+
+
+</head>
+<body>
+
+
+<form class="formulario">
+<legend>Contactanos</legend>
+<div class="contenedor">
+
+    <div class="nombres">
+        <div class="campo">
+            <label for="">Primer Nombre *</label>
+            <input type="text" id="name">
+            <p id="err1"></p>
+        </div>
+
+        <div class="campo">
+            <label>Apellido *</label>
+            <input type="text" id="lastname">
+            <p id="err2"></p>
+        </div>
+    </div>
+
+    <div class="campo email">
+        <label for="">Correo *</label>
+        <input type="email" id="email">
+        <p id="err3"></p>
+    </div>
+
+<div class="campo query">
+    <label>Tipo de Solicitud *</label>
+    <div class="radios">
+        <div class="query1">
+            <input type="radio" name="option" class="option1" id="a1">
+            <p>Consulta general</p>
+        </div>
+
+        <div class="query2">
+            <input type="radio" name="option" class="option2" id="a2">
+            <p>Solicitud de soporte</p>
+        </div>
+
+
+    </div>
+    <p id="err4"></p>
+</div>
+
+
+<div class="campo mensaje">
+    <label for="">Mensaje *</label>
+    <textarea placeholder="escribe tu mensaje aqui" id="sms" maxlength="500" minlength="15"></textarea>
+    <p id="err5"></p>
+
+</div>
+
+<div class="campo check">
+    <input type="checkbox" id="check">
+    <p>Doy mi consentimeinto a ser contactado. *</p>
+</div>
+
+    <p id="err6"></p>
+
+    <div class="campo boton">
+<button type="submit">Enviar</button>
+    </div>
+</div>
+    <div id="miAlerta">
+        <p>Porfavor, llena los campos solicitados.</p>
+        <button id="cerrar">Cerrar</button>
+    </div>
+</form>
+<div class="atribute">
+    <a href="">Lissandro D33v</a>
+</div>
+<script src="script.js">
+
+</script>
+</body>
+</html>
