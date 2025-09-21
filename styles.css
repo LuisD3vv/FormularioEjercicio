@@ -35,7 +35,7 @@ body {
 .formulario {
     background-color: var(--White);
     width: min(50rem,95%);
-    margin: 10rem auto;
+    margin: 5rem auto;
     padding: 1rem;
     border-radius: 1rem;
 }
@@ -85,6 +85,9 @@ input {
        flex-direction: column;
 
     }
+    .atribute {
+        display: none;
+    }
 }
 
 /*Acomodando*/
@@ -121,19 +124,29 @@ textarea {
     height: 10rem;
     overflow: hidden;
 }
-.check {
-    text-align: left;
+textarea::placeholder {
+    padding-top: 1rem;
+}
+.campo.check {
     display: flex;
-    align-items: center;
+align-content: flex-start;
+align-items: center;
+flex-wrap: wrap;
+gap: 1rem;
+background-color: #2222;
+border-radius: .5rem;
 }
-.check p {
-    font-size: 1.4rem;
+.campo.check label {
+margin-top: 1rem;
 }
-.check > input {
+.campo.check  input {
     flex: 0 0 10px;
-    margin-right: 1rem;
 }
-.boton {
+
+#err6 {
+    margin-top: -10px;
+    display: block;
+    width: 100%;
 }
 button {
     font-family: var(--fuente),sans-serif;
@@ -144,22 +157,41 @@ button {
     border-radius: .5rem;
     width: min(465px,100%);
     cursor: pointer;
+    box-shadow: 0 2px 0 2px rgba(0, 100, 0, 0.87);
+}
+button:active {
+    transform: scale(.98);
+    box-shadow: unset;
 }
 #miAlerta {
     display:none;
     position:fixed;
     width: min(35rem,95%);
-    top:7%;
+    top:80px;
     left:50%;
     transform:translate(-50%, -50%);
-    background-color:var(--White);
+    background:linear-gradient(90deg,rgba(0, 0, 255, 0.495),rgba(255, 0, 0, 0.434));
     padding:3rem;
-    border-bottom: 1px solid grey;
+    border-bottom: 2px solid rgb(0, 0, 0);
     border-radius:8px;
     text-align:center;
-    color:black;
+    color:white;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
+}
+#AlertaExito {
+    display:none;
+    position:fixed;
+    width: min(35rem,95%);
+    top:80px;
+    left:50%;
+    border-radius:8px;
+    text-align:center;
+    color:white;
+    font-weight: bold;
+    font-size: 1.6rem;
+    transform:translate(-50%, -50%);
+
 }
 #cerrar {
     background-color: #37af37;
@@ -175,8 +207,7 @@ button {
     color: black;
 }
 
-.atribute {text-align: center
-;margin-top: -9rem;
+.atribute {text-align: center;
 font-size: 1.5rem;
 font-weight: bold;
 }
@@ -190,7 +221,4 @@ a:hover {
 a {
     text-decoration: none;
     color: var(--White);
-}
-#err6 {
-    width: max-content;
 }
