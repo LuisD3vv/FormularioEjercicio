@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
     <link rel="stylesheet" href="styles.css">
-    <title>Frontend Mentor | Contact form</title>
+    <title>Contact form</title>
 
 
 </head>
@@ -24,37 +24,35 @@
     <div class="nombres">
         <div class="campo">
             <label for="">Primer Nombre *</label>
-            <input type="text" id="name">
+            <input type="text" id="nombre" autocomplete="off">
             <p id="err1"></p>
         </div>
 
         <div class="campo">
             <label>Apellido *</label>
-            <input type="text" id="lastname">
+            <input type="text" id="apellido" autocomplete="off">
             <p id="err2"></p>
         </div>
     </div>
 
     <div class="campo email">
         <label for="">Correo *</label>
-        <input type="email" id="email">
+        <input type="email" id="email" autocomplete="off">
         <p id="err3"></p>
     </div>
 
 <div class="campo query">
     <label>Tipo de Solicitud *</label>
     <div class="radios">
-        <div class="query1">
-            <input type="radio" name="option" class="option1" id="a1">
+        <div class="query1 request">
+            <input type="radio" name="option" value="consultaGen" class="option1" id="a1">
             <p>Consulta general</p>
         </div>
 
-        <div class="query2">
-            <input type="radio" name="option" class="option2" id="a2">
+        <div class="query2 request">
+            <input type="radio" name="option" value="consultaSoporte" class="option2" id="a2">
             <p>Solicitud de soporte</p>
         </div>
-
-
     </div>
     <p id="err4"></p>
 </div>
@@ -62,20 +60,22 @@
 
 <div class="campo mensaje">
     <label for="">Mensaje *</label>
-    <textarea placeholder="escribe tu mensaje aqui" id="sms" maxlength="500" minlength="15"></textarea>
+    <textarea placeholder="escribe tu mensaje aqui" id="mensaje" maxlength="500" minlength="15"></textarea>
     <p id="err5"></p>
 
 </div>
 
 <div class="campo check">
-    <input type="checkbox" id="check">
-    <p>Doy mi consentimeinto a ser contactado. *</p>
+    <input type="checkbox" id="check" value="consentimiento">
+    <label for="check">Doy mi consentimiento a ser contactado*
+
+    </label>
+    <p id="err6"></p>
 </div>
 
-    <p id="err6"></p>
 
     <div class="campo boton">
-<button type="submit">Enviar</button>
+<button id="enviar" type="submit">Enviar</button>
     </div>
 </div>
     <div id="miAlerta">
@@ -86,7 +86,7 @@
 <div class="atribute">
     <a href="">Lissandro D33v</a>
 </div>
-<script src="script.js">
+<script defer src="script.js">
 
 </script>
 </body>
