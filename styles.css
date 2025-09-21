@@ -35,7 +35,7 @@ body {
 .formulario {
     background-color: var(--White);
     width: min(50rem,95%);
-    margin: 2rem auto;
+    margin: 1rem auto;
     padding: 1rem;
     border-radius: 1rem;
 }
